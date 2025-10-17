@@ -1,0 +1,9 @@
+[Unit]
+Description=mqtt2sqlite
+
+[Service]
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 /usr/lib/mqtt2sqlite/mqtt2sqlite.py /etc/mqtt2sqlite.conf
+
+[Install]
+WantedBy=default.target

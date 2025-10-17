@@ -1,0 +1,1 @@
+A simple service that logs MQTT data from Shelly devices to a SQLite database.

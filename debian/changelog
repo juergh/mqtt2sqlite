@@ -1,0 +1,5 @@
+mqtt2sqlite (1.0) plucky; urgency=medium
+
+  * Initial commit.
+
+ -- Juerg Haefliger <juergh@proton.me>  Fri, 17 Oct 2025 13:39:52 +0200
