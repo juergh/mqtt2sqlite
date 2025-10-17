@@ -1,0 +1,15 @@
+Source: mqtt2sqlite
+Section: misc
+Priority: optional
+Maintainer: Juerg Haefliger <juergh@proton.me>
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.7.2
+
+Package: mqtt2sqlite
+Architecture: all
+Depends:
+ ${misc:Depends},
+ python3-paho-mqtt,
+Description: mqtt2sqlite
+ mqtt2sqlite

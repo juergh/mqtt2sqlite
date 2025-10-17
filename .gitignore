@@ -1,0 +1,8 @@
+*~
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/mqtt2sqlite.debhelper.log
+debian/mqtt2sqlite.postrm.debhelper
+debian/mqtt2sqlite.substvars
+debian/mqtt2sqlite/
