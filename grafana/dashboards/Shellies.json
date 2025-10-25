@@ -1,0 +1,338 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "af1f5wotbhh4wf"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value shellyht-244CAB4375B7"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Parents bedroom"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value shellyht-244CAB438AB6"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Outdoor"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value shellyht-485519CA96BB"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Living room"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value shellyht-67658A"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Kitchen"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "af1f5wotbhh4wf"
+          },
+          "queryText": "SELECT\n  created_at AS time,\n  device AS metric,\n  CAST(payload AS FLOAT) AS value\nFROM shellies\nWHERE topic LIKE 'shellies/shellyht-%/temperature'\nORDER BY time\n",
+          "queryType": "time series",
+          "rawQueryText": "SELECT\n  created_at AS time,\n  device AS metric,\n  CAST(payload AS FLOAT) AS value\nFROM shellies\nWHERE topic LIKE 'shellies/shellyht-%/temperature'\nORDER BY time\n",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Temperature",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "af1f5wotbhh4wf"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "axisSoftMax": 105,
+            "axisSoftMin": 0,
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value shellyht-244CAB4375B7"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Parents bedroom"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value shellyht-244CAB438AB6"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Outdoor"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value shellyht-485519CA96BB"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Living room"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "value shellyht-67658A"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Kitchen"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 9
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.2.0",
+      "targets": [
+        {
+          "queryText": "SELECT\n  created_at AS time,\n  device AS metric,\n  CAST(payload AS FLOAT) AS value\nFROM shellies\nWHERE topic LIKE 'shellies/shellyht-%/battery'\nORDER BY time\n",
+          "queryType": "time series",
+          "rawQueryText": "SELECT\n  created_at AS time,\n  device AS metric,\n  CAST(payload AS FLOAT) AS value\nFROM shellies\nWHERE topic LIKE 'shellies/shellyht-%/battery'\nORDER BY time\n",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Battery",
+      "type": "timeseries"
+    }
+  ],
+  "preload": false,
+  "schemaVersion": 42,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-24h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Shellies",
+  "uid": "ad25t5s",
+  "version": 6
+}
